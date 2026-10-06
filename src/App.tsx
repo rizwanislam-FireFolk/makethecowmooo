@@ -10,7 +10,7 @@ const DESKTOP_DEFAULT = 'https://www.image2url.com/r2/default/images/17911987639
 const MOBILE_DEFAULT = 'https://www.image2url.com/r2/default/images/1791199144369-c8c97b81-d4c2-4e84-857e-e3a0d0a14b90.png';
 
 // Audio sources
-const MOO_AUDIO_URL = 'https://www.image2url.com/r2/default/files/1791272248737-83614268-3141-49dc-8a5e-d4ead723fa7d.mp3';
+const MOO_AUDIO_URL = 'https://www.image2url.com/r2/default/files/1791275290512-baa34577-c87e-43b6-be76-3d8159cfa80d.mp3';
 const LOCAL_MOO_AUDIO = '/moo.mp3';
 
 // Local bundled fallbacks for images
