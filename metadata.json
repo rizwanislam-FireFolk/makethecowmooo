@@ -1,0 +1,6 @@
+{
+  "name": "The Cow Website",
+  "description": "A completely useless website featuring a cow. Click anywhere to Moo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
