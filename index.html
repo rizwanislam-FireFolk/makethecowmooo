@@ -3,12 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Cow Website</title>
-    <meta name="description" content="A completely useless website featuring a cow. Click anywhere to Moo." />
-    <meta property="og:title" content="The Cow Website" />
-    <meta property="og:description" content="A completely useless website featuring a cow. Click anywhere to Moo." />
+    <script>
+      (function () {
+        try {
+          var originalFetch = window.fetch ? window.fetch.bind(window) : null;
+          var _fetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function () {
+              return _fetch;
+            },
+            set: function (newFetch) {
+              _fetch = newFetch;
+            },
+            configurable: true,
+            enumerable: true,
+          });
+        } catch (e) {
+          // ignore
+        }
+
+        window.addEventListener(
+          'error',
+          function (e) {
+            if (e.filename && e.filename.indexOf('chrome-extension://') !== -1) {
+              e.preventDefault();
+              e.stopPropagation();
+              return false;
+            }
+          },
+          true
+        );
+      })();
+    </script>
+    <!-- SEO Meta Tags -->
+    <title>Make the Cow Mooo – Click to Hear the Cow Moo</title>
+    <meta
+      name="description"
+      content="Click anywhere on the screen to hear the cow moo. The simplest and most satisfying interactive useless cow button website on the internet."
+    />
+    <meta
+      name="keywords"
+      content="cow, moo, cow moo sound, make the cow moo, click to moo, useless website, interactive cow, funny cow website, moo button"
+    />
+    <meta name="author" content="Make the Cow Mooo" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://makethecow.mooo.com" />
+
+    <!-- OpenGraph Social Tags -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://makethecow.mooo.com" />
+    <meta property="og:site_name" content="Make the Cow Mooo" />
+    <meta property="og:title" content="Make the Cow Mooo – Click to Hear the Cow Moo" />
+    <meta
+      property="og:description"
+      content="Click anywhere on the screen to hear the cow moo. The simplest and most satisfying interactive useless cow button website on the internet."
+    />
+    <meta
+      property="og:image"
+      content="https://www.image2url.com/r2/default/images/1791198763999-694e09e5-f446-4599-8a25-1622a538db67.png"
+    />
+
+    <!-- Twitter / X Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Make the Cow Mooo – Click to Hear the Cow Moo" />
+    <meta
+      name="twitter:description"
+      content="Click anywhere on the screen to hear the cow moo. The simplest and most satisfying interactive useless cow button website on the internet."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.image2url.com/r2/default/images/1791198763999-694e09e5-f446-4599-8a25-1622a538db67.png"
+    />
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Make the Cow Mooo",
+        "url": "https://makethecow.mooo.com",
+        "description": "Click anywhere on the screen to hear the cow moo. The simplest and most satisfying interactive useless cow button website on the internet.",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "image": "https://www.image2url.com/r2/default/images/1791198763999-694e09e5-f446-4599-8a25-1622a538db67.png"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

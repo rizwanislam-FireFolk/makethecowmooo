@@ -1,6 +1,6 @@
 {
-  "name": "The Cow Website",
-  "description": "A completely useless website featuring a cow. Click anywhere to Moo.",
+  "name": "Make the Cow Mooo",
+  "description": "Click anywhere on the screen to hear the cow moo. The simplest and most satisfying interactive useless cow button website on the internet.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
