@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import desktopCowImg from './assets/desktop_cow.png';
 import mobileCowImg from './assets/mobile_cow.png';
 import mooAudioFile from './assets/moo.mp3';
@@ -128,6 +129,9 @@ export default function App() {
           isPressed ? 'scale-[1.015]' : 'scale-100'
         }`}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </main>
   );
 }
